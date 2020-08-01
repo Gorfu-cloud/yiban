@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>学生成绩查询结果</title>
+    <script src="js/tools/jq.js"></script>
+    <link rel="stylesheet" href="css/commen.css">
+    <link rel="stylesheet" href="css/info.css">
+    <!--layui-->
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+</head>
+
+<body style="margin: 0">
+<header>
+    <span style="font-size: 1.2rem">学生成绩查询结果</span>
+</header>
+<div class="main">
+
+    <div class="select_div clearfix">
+        <form id="form" method="post" >
+            <div>
+                <label for="xn">学年</label>
+                <select name="xn" id ="xn">
+                    <option th:each="i: ${#numbers.sequence(xn, year)}" th:value="${i}">
+                        <span th:text="${i}"></span>-<span th:text="${i+1}"></span>
+                    </option>
+                </select>
+                <label for="xq">学期</label>
+                <select name="xq" id="xq">
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                </select>
+            </div>
+            <input type="button" id="btn_find" value="查询" >
+        </form>
+    </div>
+    <div class="table_div" >
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit">查看</a>
+        </script>
+        <table id="demo" lay-filter="test" class='layui-icon'></table>
+    </div>
+    <div id="popUpdateTest" style="display: none">
+        <table id="detail" lay-filter="test1" class='layui-icon'></table>
+    </div>
+
+    <script src="layui/layui.js"></script>
+    <script src="js/info.js"></script>
+</div>
+</body>
+<script>
+    window.onbeforeunload = loginOut;
+    //监测页面退出事件
+    function loginOut() {
+        var url = "loginOut";
+        $.get(url,function(resultData){
+            alert(resultData.message);
+        });
+    };
+</script>
+
+</html>

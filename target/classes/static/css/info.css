@@ -1,0 +1,60 @@
+*{
+    font-size: 1.1rem;
+}
+header {
+    height: 60px;
+    line-height: 60px;
+}
+
+header span:nth-child(2) {
+    font-size: 0.4rem;
+
+}
+.main{
+    background-color: #fff;
+    margin-top: 0.4rem;
+    padding: 0.2rem 0;
+    height: 100%;
+}
+.main .select_div{
+    background-color: #f0eff4;
+    text-align: center;
+    width: 97%;
+    font-size: 1rem;
+    margin: 0 auto;
+    border: 1px solid #f4f4f4;
+}
+.main .select_div form div {
+    background-color: #fff;
+    padding: 0.2rem 0.4rem;
+}
+.main .select_div form div select{
+    margin-right: 0.6rem;
+    border-radius: 6px;
+}
+.main .select_div form input{
+    display: block;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.4rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 700;
+    color: #fff;
+    background-color: #337ab7;
+}
+.main .table_div{
+    padding: 0 0.4rem;
+}
+.main .table_div div
+,.main #popUpdateTest div{
+    padding: 0;
+    font-size:0.8rem;
+    text-align: center;
+}
+th span{
+    font-size:0.8rem;
+}

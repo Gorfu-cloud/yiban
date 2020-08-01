@@ -1,0 +1,64 @@
+header img {
+  width: 100%;
+}
+
+.main {
+  text-align: center;
+}
+
+.main form ul {
+  background-color: #fff;
+  padding-left: 1rem;
+}
+
+.main form ul li {
+  padding: 4px 0;
+  text-align: left;
+}
+
+.main form ul li:nth-child(1) {
+  border-bottom: 2px solid #f0eff4;
+}
+
+.main form ul li input {
+  width: 72%;
+  outline: none;
+  margin-left: 1.5rem;
+}
+
+.main form input {
+  border: 0;
+  border-radius: 6px;
+  text-indent: 0.5rem;
+  height: 2.3rem;
+  font-size: 1.1rem;
+}
+
+.main form .btn_submit {
+  width: 92%;
+  height: 54px;
+  background-color: #1aac19;
+  margin-top: 26px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.main .user_tip {
+  text-align: left;
+  margin: 0.8rem 0.8rem;
+  padding: 0.8rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  color: #a9442d;
+  background-color: #f2dede;
+}
+
+footer {
+  padding-top: 20px;
+  text-align: center;
+}
+
+footer h2,
+footer h2 a {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>易班成绩查询系统</title>
+  <link rel="stylesheet" href="css/commen.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <header>
+    <span>
+      广东药科大学成绩查询系统
+    </span>
+  </header>
+  <div class="main">
+    <marquee behavior="scroll" direction="left">
+      <font style="color: red;font-size: 1rem;">系统休息时间：00:00-08：00，如有不便，望同学们谅解！</font>
+    </marquee>
+    <form action="login" method="post">
+      <ul>
+        <li>
+          <label for="yhm">学号</label>
+          <input type="text" name="yhm" id="yhm" pattern="[0-9]{10}" title="请输入正确的学号" th:value="${yhm}" placeholder="请输入学生学号">
+        </li>
+
+        <li>
+          <label for="mm">密码</label>
+          <input type="password" name="mm" id="mm" required="required" title="请输入密码" placeholder="请输入教务系统密码">
+        </li>
+
+      </ul>
+      <input type="submit" value="查询" class="btn_submit">
+    </form>
+    <div class="user_tip">
+      1：学生账号为学号，教职工账号为工资号，初始密码学生为证件号码后六位，教职工为6个8<br>
+      2：密码忘记请联系学院的教学秘书或辅导员<br>
+      3：密码组成为数字加字母
+    </div>
+  </div>
+  <footer>
+    <h2>©&nbsp;&nbsp;2020&nbsp;&nbsp;<a href="https://mp.weixin.qq.com/s/OJeMqq1zUvwKvogEcmtihw"
+        target="_blank">广东药科大学易班学生工作站</a></h2>
+  </footer>
+</body>
+<script type="text/javascript">
+  if (localStorage.pagecount) {
+    localStorage.pagecount = Number(localStorage.pagecount) + 1;
+  }
+  else {
+    localStorage.pagecount = 1;
+  }
+  console.log("当前访问次数：" + localStorage.pagecount);
+
+</script>
+<script type="text/javascript" th:inline="javascript">
+  var t=[[${message}]];
+  window.onload=function()//用window的onload事件，窗体加载完毕的时候
+  {
+    if(t!=null){
+      alert(t)
+    }
+  }
+</script>
+
+</html>
